@@ -1,3 +1,4 @@
+score = 0;
 left_wrist_X = 0;
 left_wrist_Y = 0;
 right_wrist_X = 0;
@@ -24,6 +25,27 @@ function modelLoaded()
 function draw()
 {
     image(video,0,0,600,500);
+    fill(" #d6ecef");
+    stroke("#008080");
+    if(scoreLeftWrist>0.2)
+    {
+    circle(left_wrist_x, left_wrist_y, 20);
+    InNumberleftwristy = Number(left_wrist_y);
+    remove_decimals = floor(InNumberleftwristy);
+    volume = remove_decimals/500;
+    document.getElementById("volume").innerHTML = "Volume = "+volume;
+    song.setVolume(volume);
+    stroke("#008080");
+    if(scoreLeftWrist>0.2)
+    {
+    circle(left_wrist_x, left_wrist_y, 20);
+    InNumberleftwristy = Number(left_wrist_y);
+    remove_decimals = floor(InNumberleftwristy);
+    volume = remove_decimals/500;
+    document.getElementById("volume").innerHTML = "Volume = "+volume;
+    song.setVolume(volume);
+    }
+
 }
 function gotPoses(results)
 {
